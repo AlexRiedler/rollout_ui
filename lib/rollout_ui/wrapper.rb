@@ -17,6 +17,10 @@ module RolloutUi
       redis.sadd(:features, feature)
     end
 
+    def self.add_feature(redis, feature)
+      redis.instance_variable_get('@storage').sadd(:features, feature)
+    end
+
     def features
       features = redis.smembers(:features)
       features ? features.sort : []
