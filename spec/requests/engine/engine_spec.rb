@@ -34,7 +34,7 @@ describe "Engine" do
           click_button "Save"
         end
 
-        expect(page).to have_css(".percentage option[selected='selected']", :text => "57")
+        expect(page).to have_css(".percentage option[selected]", text: "57")
       end
     end
 
@@ -63,7 +63,7 @@ describe "Engine" do
           click_button "Save"
         end
 
-        expect(page).to have_css(".groups option[selected='selected']", :text => "beta_testers")
+        expect(page).to have_css(".groups option[selected]", text: "beta_testers")
       end
     end
 
