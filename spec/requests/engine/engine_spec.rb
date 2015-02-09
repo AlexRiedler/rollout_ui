@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Engine" do
   describe "GET /rollout" do
-    let(:user) { mock(:user, :id => 5) }
+    let(:user) { double(:user, :id => 5) }
 
     before do
       $rollout.active?(:featureA, user)
